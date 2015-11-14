@@ -11,7 +11,7 @@
 	  <div class="panel-body">
 	    <b>User:</b> friendzone_{{ Auth::user()->id }} <br />
 		<b>Password:</b> {{ Auth::user()->db_password }} <br />
-		<a class="btn btn-default" href="http://phpmyadmin.app/?pma_username=friendzone_{{ Auth::user()->id }}&pma_password={{ Auth::user()->db_password }}" role="button">Login phpMyAdmin</a>
+		<a class="btn btn-default" href="http://{{getenv('PHPMYADMIN')}}/?pma_username=friendzone_{{ Auth::user()->id }}&pma_password={{ Auth::user()->db_password }}" role="button">Login phpMyAdmin</a>
 	  </div>
 	</div>
 

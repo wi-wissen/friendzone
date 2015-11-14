@@ -15,7 +15,7 @@
 			  <div class="form-group">
 			    <label class="control-label col-sm-2" for="blogpost">Post:</label>
 			    <div class="col-sm-10">
-			      <textarea class="form-control" name="blogpost" placeholder="What?! Telle me more."></textarea>
+			      <textarea class="form-control" name="blogpost" placeholder="What?! Tell me more."></textarea>
 			    </div>
 			  </div>
 			  <div class="form-group">
