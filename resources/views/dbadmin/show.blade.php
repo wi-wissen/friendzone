@@ -17,6 +17,7 @@
 				<a class="btn btn-warning" href="/dba/truncate/profiles/{{ $user->id }}" role="button">Truncate Profiles</a> &nbsp;
 			@else
 				<a class="btn btn-warning" href="/dba/insert/profiles/{{ $user->id }}" role="button">Insert Profiles</a> &nbsp;
+				<a class="btn btn-warning" href="/dba/rebuilt/profiles/{{ $user->id }}" role="button">Rebuilt Profiles</a> &nbsp;
 			@endif
 		@else
 			<a class="btn btn-success" href="/dba/create/profiles/{{ $user->id }}" role="button">Create Profiles</a> &nbsp;
@@ -36,6 +37,7 @@
 				<a class="btn btn-warning" href="/dba/truncate/posts/{{ $user->id }}" role="button">Truncate Posts</a> &nbsp;
 			@else
 				<a class="btn btn-warning" href="/dba/insert/posts/{{ $user->id }}" role="button">Insert Posts</a> &nbsp;
+				<a class="btn btn-warning" href="/dba/rebuilt/profiles/{{ $user->id }}" role="button">Rebuilt Posts</a> &nbsp;
 			@endif
 		@else
 			<a class="btn btn-success" href="/dba/create/posts/{{ $user->id }}" role="button">Create Posts</a> &nbsp;
@@ -55,6 +57,7 @@
 				<a class="btn btn-warning" href="/dba/truncate/profile_profile/{{ $user->id }}" role="button">Truncate Profile_Profile</a> &nbsp;
 			@else
 				<a class="btn btn-warning" href="/dba/insert/profile_profile/{{ $user->id }}" role="button">Insert Profile_Profile</a> &nbsp;
+				<a class="btn btn-warning" href="/dba/rebuilt/profiles/{{ $user->id }}" role="button">Rebuilt Profile_Profile</a> &nbsp;
 			@endif
 		@else
 			<a class="btn btn-success" href="/dba/create/profile_profile/{{ $user->id }}" role="button">Create Profile_Profile</a> &nbsp;

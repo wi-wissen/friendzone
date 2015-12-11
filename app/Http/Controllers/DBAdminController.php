@@ -45,7 +45,7 @@ class DBAdminController extends Controller {
     {
         $this->dbaction($id);
         DB::unprepared(file_get_contents(base_path() . '/resources/sql/' . $table . ' create table.sql'));
-        return redirect('dba');
+        return back();
     }
 
     /*
@@ -57,7 +57,21 @@ class DBAdminController extends Controller {
     {
         $this->dbaction($id);
         DB::unprepared(file_get_contents(base_path() . '/resources/sql/' . $table . ' insert.sql'));
-        return redirect('dba');
+        return back();
+    }
+
+    /*
+    *   $table: profile, posts, profile_profile
+    *   $id:    user->id  
+    *
+    */
+    public function getRebuilt($table, $id)
+    {
+        $this->dbaction($id);
+        Schema::drop($table);
+        DB::unprepared(file_get_contents(base_path() . '/resources/sql/' . $table . ' create table.sql'));
+        DB::unprepared(file_get_contents(base_path() . '/resources/sql/' . $table . ' insert.sql'));
+        return back();
     }
 
     /*
@@ -69,7 +83,7 @@ class DBAdminController extends Controller {
     {
         $this->dbaction($id);
         DB::table($table)->truncate();
-        return redirect('dba');
+        return back();
     }
 
     /*
@@ -81,7 +95,7 @@ class DBAdminController extends Controller {
     {
         $this->dbaction($id);
         Schema::drop($table);
-        return redirect('dba');
+        return back();
     }
 
     /*

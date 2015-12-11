@@ -15,9 +15,9 @@
 		<a class="btn btn-default" href="http://{{getenv('PHPMYADMIN')}}/?pma_username=friendzone_{{ Auth::user()->id }}&pma_password={{ Auth::user()->db_password }}" role="button">Login phpMyAdmin</a>
 		</div>
 		<div style="float:right;">
-	    <b>User:</b> friendzone <br />
+	    <b>User:</b> {{ getenv('DB_USERNAME')}} <br />
 		<b>Password:</b> ********** <br />
-		<a class="btn btn-primary" href="http://{{getenv('PHPMYADMIN')}}/?pma_username=friendzone" role="button">Login phpMyAdmin</a>
+		<a class="btn btn-primary" href="http://{{getenv('PHPMYADMIN')}}/?pma_username={{ getenv('DB_USERNAME')}}&pma_password={{ getenv('DB_PASSWORD')}}" role="button">Login phpMyAdmin</a>
 		</div>
 	  </div>
 	</div>
