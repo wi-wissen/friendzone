@@ -85,7 +85,7 @@ class ProfileController extends Controller
 
         //var_dump(Input::get());
 
-        $profiles=DB::table('profiles')->where('name', 'like', "%$name%")->where('forename', 'like', "%$forename%")->where('gender', 'like', "%$gender%")
+        $profiles=DB::table('profiles')->where('name', 'like', "%$name%")->where('forename', 'like', "%$forename%")->where('gender', 'like', "$gender%")
             ->where('city', 'like', "%$city%")->where('color', 'like', "%$color%")->orderBy('name', 'asc')->paginate(15);
         return view('profiles.index',compact('profiles'));
     }
