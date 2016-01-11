@@ -19,7 +19,7 @@
 				  </tr>
 				  <tr>
 				    <td>Resident</td>
-				    <td>{{ $profile->street }} in {{ $profile->zipcode }} {{ $profile->city }}</td>
+				    <td>{{ $profile->street }} in {{ $profile->zipcode }} {{ $profile->city }} ({{ $profile->country }})</td>
 				  </tr>
 				  <tr>
 				    <td>Mail</td>

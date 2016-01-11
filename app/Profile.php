@@ -16,7 +16,9 @@ class Profile extends Model
         'street',
         'city',
         'zipcode',
+        'country',
         'mail',
+        'password',
         'telephone',
         'color',
         'centimeters'

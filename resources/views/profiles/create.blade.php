@@ -46,6 +46,12 @@
 	    </div>
 	  </div>
 	  <div class="form-group">
+	    <label class="control-label col-sm-2" for="zipcode">Country:</label>
+	    <div class="col-sm-10">
+	      <input type="text" class="form-control" name="country" placeholder="Germany">
+	    </div>
+	  </div>
+	  <div class="form-group">
 	    <label class="control-label col-sm-2" for="mail">Email:</label>
 	    <div class="col-sm-10">
 	      <input type="text" class="form-control" name="mail" placeholder="me@friendzone.app">
@@ -67,6 +73,12 @@
 	    <label class="control-label col-sm-2" for="centimeters">Heigh (in cm):</label>
 	    <div class="col-sm-10">
 	      <input type="text" class="form-control" name="centimeters" placeholder="167">
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <label class="control-label col-sm-2" for="password">Password:</label>
+	    <div class="col-sm-10">
+	      <input type="password" class="form-control" name="password" placeholder="">
 	    </div>
 	  </div>
 	  <div class="form-group">

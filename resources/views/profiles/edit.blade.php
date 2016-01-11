@@ -43,6 +43,12 @@
 	    </div>
 	  </div>
 	  <div class="form-group">
+	    <label class="control-label col-sm-2" for="country">Country:</label>
+	    <div class="col-sm-10">
+	      {!! Form::text('country',null,['class'=>'form-control']) !!}
+	    </div>
+	  </div>
+	  <div class="form-group">
 	    <label class="control-label col-sm-2" for="mail">Email:</label>
 	    <div class="col-sm-10">
 	      {!! Form::text('mail',null,['class'=>'form-control']) !!}
@@ -64,6 +70,12 @@
 	    <label class="control-label col-sm-2" for="centimeters">Heigh (in cm):</label>
 	    <div class="col-sm-10">
 	      {!! Form::text('centimeters',null,['class'=>'form-control']) !!}
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <label class="control-label col-sm-2" for="password">Password:</label>
+	    <div class="col-sm-10">
+	      {!! Form::password('password',['class'=>'form-control']) !!}
 	    </div>
 	  </div>
 	  <div class="form-group">
