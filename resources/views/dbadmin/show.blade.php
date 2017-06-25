@@ -3,7 +3,7 @@
 
 @section('content')
 
-	<a style="float:right;" class="btn btn-default" href="http://{{getenv('PHPMYADMIN')}}/?pma_username=friendzone_{{ Auth::user()->id }}&pma_password={{ Auth::user()->db_password }}" role="button">Login phpMyAdmin</a>
+	<a style="float:right;" class="btn btn-default" href="http://{!!getenv('PHPMYADMIN')!!}/?pma_username=friendzone_{{ Auth::user()->id }}&pma_password={{ Auth::user()->db_password }}" role="button">Login phpMyAdmin</a>
 	<h1>{{ $user->name }}</h1>
 	
 	<div class="panel panel-default">

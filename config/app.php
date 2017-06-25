@@ -146,6 +146,12 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        'GrahamCampbell\Exceptions\ExceptionsServiceProvider',
+        Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class,
+        'Laracasts\Flash\FlashServiceProvider',
+        Barryvdh\Debugbar\ServiceProvider::class,
+        'Gbrock\Table\Providers\TableServiceProvider',
+
     ],
 
     /*
@@ -196,6 +202,10 @@ return [
         'View'      => Illuminate\Support\Facades\View::class,
         'Form'     => Illuminate\Html\FormFacade::class,
         'Html'     => Illuminate\Html\HtmlFacade::class,
+
+        'Flash'     => 'Laracasts\Flash\Flash',
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
+        'Table'      => 'Gbrock\Table\Facades\Table',
 
     ],
 

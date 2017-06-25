@@ -12,12 +12,12 @@
 	  	<div style="float:left;">
 	    <b>User:</b> friendzone_{{ Auth::user()->id }} <br />
 		<b>Password:</b> {{ Auth::user()->db_password }} <br />
-		<a class="btn btn-default" href="http://{{getenv('PHPMYADMIN')}}/?pma_username=friendzone_{{ Auth::user()->id }}&pma_password={{ Auth::user()->db_password }}" role="button">Login phpMyAdmin</a>
+		<a class="btn btn-default" href="{!! getenv('PHPMYADMIN')!!}/?pma_username=friendzone_{{ Auth::user()->id }}&pma_password={{ Auth::user()->db_password }}" role="button">Login phpMyAdmin</a>
 		</div>
 		<div style="float:right;">
 	    <b>User:</b> {{ getenv('DB_USERNAME')}} <br />
 		<b>Password:</b> ********** <br />
-		<a class="btn btn-primary" href="http://{{getenv('PHPMYADMIN')}}/?pma_username={{ getenv('DB_USERNAME')}}&pma_password={{ getenv('DB_PASSWORD')}}" role="button">Login phpMyAdmin</a>
+		<a class="btn btn-primary" href="{!! getenv('PHPMYADMIN')!!}/?pma_username={{ getenv('DB_USERNAME')}}&pma_password={{ getenv('DB_PASSWORD')}}" role="button">Login phpMyAdmin</a>
 		</div>
 	  </div>
 	</div>
@@ -49,6 +49,7 @@
 			         <th>Name</th>
 			         <th>phpMyAdmin</th>
 			         <th>Manage</th>
+							 <th>set password</th>
 			     </tr>
 		     </thead>
 		     <tbody>
@@ -59,6 +60,7 @@
 				<td>{{ $user->name }}</td>
 				<td><a class="btn btn-default" href="http://{{getenv('PHPMYADMIN')}}/?pma_username=friendzone_{{ $user->id }}&pma_password={{ $user->db_password }}" role="button">Login as {{ $user->id }}</a></td>
 				<td><a class="btn btn-primary" href="dba/user/{{ $user->id }}">Manage {{ $user->id }}</a></td>
+				<td><a class="btn btn-default" href="dba/password/{{ $user->id }}">set password for {{ $user->id }}</a></td>
 			</tr>
 			 @empty
 			 <tr>

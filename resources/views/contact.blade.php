@@ -2,10 +2,7 @@
 @section('title', 'Contact')
 
 @section('content')
-    <div class="container">
-        <div class="content">
-            <div class="title">Contact Page</div>
-            <div class="quote">Our contact page!</div>
-        </div>
-    </div>
+    <h1>Contact Page</h1>
+    <div class="quote"><a href="https://wi-wissen.de/contact.php">Contact Form</a></div>
+
 @endsection

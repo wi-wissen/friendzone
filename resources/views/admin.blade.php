@@ -9,10 +9,17 @@
 	    <h3 class="panel-title">Database</h3>
 	  </div>
 	  <div class="panel-body">
+	  <div style="float:left;">
+			<b>User:</b> friendzone_{{ Auth::user()->id }} <br />
+		<b>Password:</b> {{ Auth::user()->db_password }} <br />
+		<a class="btn btn-default" href="{!!getenv('PHPMYADMIN')!!}/?pma_username=friendzone_{{ Auth::user()->id }}&pma_password={{ Auth::user()->db_password }}" role="button">Login phpMyAdmin</a>
+	  </div>
+		<div style="float:right;">
 	    <b>User:</b> friendzone_{{ Auth::user()->id }} <br />
 		<b>Password:</b> {{ Auth::user()->db_password }} <br />
-		<a class="btn btn-default" href="http://{{getenv('PHPMYADMIN')}}/?pma_username=friendzone_{{ Auth::user()->id }}&pma_password={{ Auth::user()->db_password }}" role="button">Login phpMyAdmin</a>
-	  </div>
+		<a class="btn btn-primary" href="/sql" role="button">SQL-Editor</a>
+		</div>
+		</div>
 	</div>
 
 	@if (Schema::hasTable('profiles'))

@@ -1,3 +1,31 @@
-body {
+html { /*http://getbootstrap.com/examples/sticky-footer-navbar/sticky-footer-navbar.css */
   padding-top: 80px;
+  position: relative;
+  min-height: 100%;
 }
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 40px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 40px;
+  background-color: #f5f5f5;
+}
+
+.footer > .container .text-muted {
+  margin: 8px 0;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.jumbotron {
+  background-color:rgba(238, 238, 238, 0.5);
+} 

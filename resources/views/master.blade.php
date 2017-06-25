@@ -7,7 +7,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
+    <link rel="icon" href="../../favicon-facebook.ico">
 
     <title>@yield('title')</title>
 
@@ -49,26 +49,30 @@
           <a class="navbar-brand" href="/">friendzone</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
+            @if (Auth::check()) {
             <form class="navbar-form navbar-left" role="search" action="/profiles/search" method="get">
               <div class="form-group">
                 <input type="text" name="q" class="form-control" placeholder="Search">
               </div>
               <button type="submit" class="btn btn-default">Submit</button>
             </form>
+            @endif
           <ul class="nav navbar-nav navbar-right">
             @if (Auth::check()) {
               @if (Auth::user()->is_admin) { 
-                <li class="active"><a href="/dba">Admin</a></li>
+                <li class=""><a href="/dba">DB Admin</a></li>
+                <li class="active"><a href="/admin">Admin</a></li>
               @else
                 <li class="active"><a href="/admin">Admin</a></li>
               @endif   
             @endif
             <li><a href="/about/">About</a></li>
-            <li><a href="/contact/">Contact</a></li>
+            <li><a href="https://wi-wissen.de/contact.php">Contact</a></li>
             @if (Auth::check()) {
               <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
               <ul class="dropdown-menu">
+                <li><a href="/user/password">Change password</a></li>
                 <li><a href="/auth/logout">Logout</a></li>
               </ul>
             </li>
@@ -81,10 +85,31 @@
     </nav>
 
     <div class="container">
+      @include('flash::message')
 
         @yield('content')
 
     </div> <!-- /container -->
+
+    <footer class="footer">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-6">
+                <p class="text-muted">(c) wi-wissen.de</p>
+            </div>
+            <div class="col-md-6 text-right">
+                <p class="text-muted"><a href="/about">About</a> - <a href="https://wi-wissen.de/contact.php">Contact</a> - <a href="https://wi-wissen.de/impress.html">Impress</a></p>
+            </div>
+        </div>  
+       </div>
+    </footer>
+
+    <script>
+      $('#flash-overlay-modal').modal();
+    </script>
+    <!--<script>
+    $('div.alert').not('.alert-important').delay(3000).fadeOut(350);
+    </script>-->
 
   </body>
 </html>

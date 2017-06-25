@@ -24,11 +24,31 @@ class DBAdminController extends Controller {
     }
 
     public function getIndex()
-    {
+    {      
         $users = User::orderBy('created_at', 'asc')->get();
         return view('dbadmin.index')->with('users', $users);
     }
 
+    public function getPassword($id)
+    {
+        //generate id
+        $chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+        $count = mb_strlen($chars);
+
+        for ($i = 0, $pw = ''; $i < 6; $i++) {
+            $index = rand(0, $count - 1);
+            $pw .= mb_substr($chars, $index, 1);
+        }
+
+
+        $user = User::find($id);
+        $user->password = bcrypt($pw);
+        $user->save();
+
+        flash()->overlay('New Password: ' . $pw, 'Password for User ' . $id);
+        return back();
+
+    }
     public function getUser($id)
     {
         $user = User::find($id);
