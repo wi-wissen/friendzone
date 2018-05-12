@@ -131,7 +131,7 @@
     <div class="container">
 
     <h1>SQL-Editor</h1>
-	  <p>In diesem Formular können SQL_Befehle direkt an die Datenbank gerichtet werden.</p>
+	  <p>In diesem Formular können SQL-Befehle direkt an die Datenbank gerichtet werden.</p>
 	  <form action="sql" method="post">
       {{ csrf_field() }}
 		<div class="form-group">
