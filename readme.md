@@ -1,5 +1,7 @@
 ﻿## friendzone - a social network is rising
 
+**friendzone discontinued! Please use use the successor [InstaHub](https://github.com/wi-wissen/InstaHub).** 
+
 **Source code and install instructions are in English. Documentation and excersices currently are available in German only.**
 
 friendzone is a social network for educational purpose only. Students can create their own social network as a database admin. They learn basics about working in a software project, creating and managing a database, querying (SQL SELECT) and editing (SQL INSERT, UPDATE and DELETE).
